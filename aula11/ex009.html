@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+
+    <style>
+        input[type="text"] {
+            border-radius: 15px;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+        }
+
+        input[type="button"] {
+            padding: 4px 7px;
+            box-shadow: 1px 1px 4px rgba(137, 95, 216, 0.788);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Estrangeiro ou Brasileiro?</h1>
+    Digite a sua nacionalidade <input type="text" name="txtna" id="txtna">
+    <input type="button" value="Verificar" onclick="verificar()" />
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificar() {
+            var resultado = window.document.getElementById('resultado')
+
+            var txtna = window.document.getElementById('txtna')
+            var nacionalidade = txtna.value.toLowerCase;
+
+            if (nacionalidade === "brasileira" || nacionalidade === "brasileiro") {
+                resultado.innerHTML = (`<p>você é <strong>${nacionalidade}!</strong></p>`)
+            } else {
+                resultado.innerHTML = (`<p>Você é <strong>estrangeiro!</strong></p>`)
+            }
+        }
+    </script>
+</body>

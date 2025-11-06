@@ -15,7 +15,10 @@
 
         input[type="button"] {
             padding: 4px 7px;
-            box-shadow: 1px 1px 4px rgba(137, 95, 216, 0.788);
+            box-shadow: 1px 1px 4px rgba(79, 30, 170, 0.788);
+            background-color: rgba(167, 116, 214, 0.281);
+            border: none;
+            color: purple;
         }
     </style>
 </head>
@@ -32,7 +35,7 @@
             var resultado = window.document.getElementById('resultado')
 
             var txtna = window.document.getElementById('txtna')
-            var nacionalidade = txtna.value.toLowerCase;
+            var nacionalidade = txtna.value.toLowerCase();
 
             if (nacionalidade === "brasileira" || nacionalidade === "brasileiro") {
                 resultado.innerHTML = (`<p>você é <strong>${nacionalidade}!</strong></p>`)
